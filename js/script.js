@@ -221,6 +221,7 @@
   });
 
   // Product grid — staggered
+  // Note: products-renderer.js already injected cards before this runs
   const productGrids = document.querySelectorAll('.productos__grid');
   productGrids.forEach(grid => {
     grid.setAttribute('data-reveal-stagger', '');
