@@ -1,24 +1,13 @@
 /* ============================================================
    HILITOS — Product Database
    ============================================================
-   Structure supports:
-   • product search by ref, name, color, talla
-   • WhatsApp ordering links
-   • price retrieval (COP)
-   • AI agent queries ("Do you have ref 2257?")
+   Mirrors data/products.json — keep both files in sync.
 
    Usage:
-     // Get a product
-     HILITOS.get('2257')
-
-     // Get all featured products
-     HILITOS.featured()
-
-     // Search by name or color
-     HILITOS.search('beige')
-
-     // Get WhatsApp order link
-     HILITOS.orderLink('2257')
+     HILITOS.get('2257')          // single product
+     HILITOS.featured()           // grid products
+     HILITOS.search('beige')      // search
+     HILITOS.orderLink('2257')    // WhatsApp link
    ============================================================ */
 
 'use strict';
@@ -35,9 +24,9 @@
     '2257': {
       ref:         '2257',
       name:        'Estuche Saco con Capa',
-      description: 'Saco con capa, pantalón con pie, gorro y mitones tejidos a mano. Nuestro estuche más querido, en colores pastel naturales.',
+      description: 'Estuche tejido artesanal en colores pastel, muy querido por las familias para recibir al bebé.',
       talla:       'RN',
-      price:       84000,
+      price:       82000,
       colors:      ['Amarillo', 'Verde Agua', 'Beige', 'Blanco'],
       image:       BASE_IMG + '2257.jpg',
       keywords:    ['estuche', 'saco', 'capa', 'gorro', 'mitones', 'pantalón', 'rn', 'recién nacido', 'amarillo', 'verde agua', '2257'],
@@ -49,7 +38,7 @@
       name:        'Estuche Tejido Clásico',
       description: 'Ajuar clásico artesanal tejido a mano. Incluye saco, pantalón con pie cubierto, gorro y mitones en hilo suave.',
       talla:       'RN',
-      price:       84000,
+      price:       93200,
       colors:      ['Beige', 'Blanco', 'Verde Agua', 'Rosa'],
       image:       BASE_IMG + '2258.jpg',
       keywords:    ['estuche', 'saco', 'clásico', 'pantalón', 'gorro', 'mitones', 'rn', 'recién nacido', 'beige', 'blanco', '2258'],
@@ -61,7 +50,8 @@
       name:        'Set Premium Recién Nacido',
       description: 'Nuestro set premium con acabados especiales. Saco, pantalón, gorro, mitones y body interior para la llegada más especial.',
       talla:       'RN',
-      price:       105000,
+      price:       59900,
+      sale:        true,
       colors:      ['Blanco', 'Beige', 'Café'],
       image:       BASE_IMG + '2809.jpg',
       keywords:    ['set', 'premium', 'saco', 'pantalón', 'gorro', 'mitones', 'body', 'rn', 'recién nacido', 'blanco', '2809'],
@@ -73,7 +63,7 @@
       name:        'Conjunto Tejido Natural',
       description: 'Elaborado en fibra natural 100%. Transpirable, suave al tacto y amigable con la piel más delicada del recién nacido.',
       talla:       'RN',
-      price:       78000,
+      price:       91900,
       colors:      ['Natural', 'Beige'],
       image:       BASE_IMG + '2810.jpg',
       keywords:    ['conjunto', 'natural', 'fibra', 'transpirable', 'suave', 'rn', 'recién nacido', 'beige', '2810'],
@@ -83,24 +73,24 @@
     '2817': {
       ref:         '2817',
       name:        'Conjunto Unisex Artesanal',
-      description: 'Diseño unisex ideal para niño o niña. Saco, pantalón con pie, gorro y mitones. Ideal para regalo de baby shower.',
-      talla:       'RN / 0–3M',
-      price:       84000,
+      description: 'Mameluco unisex con capa bordada y gorro para niño o balaca para niña, ideal para regalo de baby shower.',
+      talla:       '0',
+      price:       64900,
       colors:      ['Beige', 'Blanco', 'Azul', 'Rosa', 'Café'],
       image:       BASE_IMG + '2817.jpg',
-      keywords:    ['conjunto', 'unisex', 'niño', 'niña', 'baby shower', 'regalo', 'rn', '0-3m', '2817'],
+      keywords:    ['conjunto', 'unisex', 'niño', 'niña', 'baby shower', 'regalo', 'mameluco', 'capa', '0', '2817'],
       featured:    true,
     },
 
     '2823': {
       ref:         '2823',
       name:        'Ajuar Baby Shower',
-      description: 'El regalo perfecto para un baby shower. Tejido artesanal presentado en caja especial, listo para sorprender.',
+      description: 'Bata tejida para bebé presentada en gancho colgado.',
       talla:       'RN',
-      price:       89000,
+      price:       83900,
       colors:      ['Beige', 'Blanco', 'Rosa', 'Azul'],
       image:       BASE_IMG + '2823.jpg',
-      keywords:    ['ajuar', 'baby shower', 'regalo', 'caja', 'especial', 'rn', 'recién nacido', '2823'],
+      keywords:    ['ajuar', 'baby shower', 'regalo', 'bata', 'rn', 'recién nacido', '2823'],
       featured:    true,
     },
 
@@ -109,7 +99,7 @@
       name:        'Set Hospital Recién Nacido',
       description: 'Pensado para el momento de llegar al mundo. Suave, cómodo y tejido con amor. Perfecto para las primeras fotos en el hospital.',
       talla:       'RN',
-      price:       84000,
+      price:       109900,
       colors:      ['Blanco', 'Beige', 'Rosa', 'Azul'],
       image:       BASE_IMG + '4091.jpg',
       keywords:    ['set', 'hospital', 'llegada', 'fotos', 'newborn', 'rn', 'recién nacido', 'blanco', '4091'],
@@ -119,24 +109,24 @@
     '4105': {
       ref:         '4105',
       name:        'Estuche Newborn Fotografía',
-      description: 'Creado para la sesión de fotos más especial. Colores suaves y texturas hermosas para capturar los primeros momentos.',
-      talla:       'RN / 3M',
-      price:       78000,
+      description: 'Mameluco para niña con medias tejidas, camiseta y gorro tejido, perfecto para sesión de fotos.',
+      talla:       '3 meses',
+      price:       106600,
       colors:      ['Beige', 'Blanco', 'Rosa'],
       image:       BASE_IMG + '4105.jpg',
-      keywords:    ['estuche', 'newborn', 'fotografía', 'fotos', 'sesión', 'rn', '3m', 'beige', 'rosa', '4105'],
+      keywords:    ['estuche', 'newborn', 'fotografía', 'fotos', 'sesión', 'mameluco', 'medias', '3m', 'beige', 'rosa', '4105'],
       featured:    true,
     },
 
     '4111': {
       ref:         '4111',
       name:        'Conjunto Artesanal Bebé',
-      description: 'Conjunto clásico artesanal para bebé. Tejido a mano en fibras naturales suaves. Disponible en tallas RN y 0–3M.',
-      talla:       'RN / 0–3M',
-      price:       78000,
+      description: 'Conjunto unisex en estuche con saco, pantalón, medias, body y gorro tejido.',
+      talla:       'RN',
+      price:       86900,
       colors:      ['Azul', 'Beige', 'Blanco', 'Rosa'],
       image:       BASE_IMG + '4111.jpg',
-      keywords:    ['conjunto', 'artesanal', 'bebé', 'fibra', 'natural', 'rn', '0-3m', 'azul', '4111'],
+      keywords:    ['conjunto', 'artesanal', 'bebé', 'saco', 'pantalón', 'medias', 'body', 'gorro', 'rn', 'azul', '4111'],
       featured:    true,
     },
 
@@ -172,22 +162,18 @@
 
   window.HILITOS = {
 
-    /** Return all products as an array */
     all() {
       return Object.values(CATALOG);
     },
 
-    /** Return only featured products (for the grid display) */
     featured() {
       return Object.values(CATALOG).filter(p => p.featured);
     },
 
-    /** Lookup by reference number */
     get(ref) {
       return CATALOG[String(ref)] || null;
     },
 
-    /** Case-insensitive search by name, color, description, ref, or keyword */
     search(query) {
       const q = query.toLowerCase();
       return Object.values(CATALOG).filter(p =>
@@ -199,7 +185,6 @@
       );
     },
 
-    /** Build WhatsApp order link for a product */
     orderLink(ref) {
       const p = CATALOG[String(ref)];
       if (!p) return `https://wa.me/${WA_NUMBER}`;
@@ -209,7 +194,6 @@
       return `https://wa.me/${WA_NUMBER}?text=${text}`;
     },
 
-    /** Format price to Colombian pesos */
     formatPrice(amount) {
       return new Intl.NumberFormat('es-CO', {
         style:                 'currency',

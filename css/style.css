@@ -1435,8 +1435,62 @@ body, input, select, textarea, button {
 
 
 /* ============================================================
-   18. PRODUCT CARD TAG + OVERLAY SVG
+   18. PRODUCT CARD — META TABLE, SALE BADGE, UPDATED LAYOUT
    ============================================================ */
+
+/* Meta table (Talla / Ref.) */
+.product-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.product-card__meta-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+
+.product-card__meta dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  min-width: 2.8rem;
+  flex-shrink: 0;
+}
+
+.product-card__meta dd {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-brown-dark);
+}
+
+/* Sale badge — absolute over image */
+.product-card__sale-badge {
+  position: absolute;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  background-color: #c0392b;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xl);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Sale price highlight */
+.product-card__price--sale {
+  color: #c0392b;
+}
+
+/* Keep tag class for backwards compat if referenced anywhere */
 .product-card__tag {
   display: inline-block;
   font-size: 0.72rem;
@@ -1686,6 +1740,69 @@ body, input, select, textarea, button {
   font-size: 0.72rem;
   color: rgba(255, 253, 249, 0.38);
   margin-top: 0.15rem;
+}
+
+.footer__privacy-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   26. PRIVACY PAGE
+   ============================================================ */
+.privacy-page {
+  padding-top: calc(var(--nav-h) + var(--space-xl));
+  padding-bottom: var(--space-2xl);
+  background-color: var(--color-warm-white);
+  min-height: 100vh;
+}
+
+.privacy-page__container {
+  max-width: 720px;
+}
+
+.privacy-page__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.privacy-page__updated {
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-xl);
+}
+
+.privacy-page__section {
+  margin-bottom: var(--space-xl);
+}
+
+.privacy-page__text {
+  font-size: 1rem;
+  color: var(--color-text-mid);
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+}
+
+.privacy-page__contact {
+  margin-top: var(--space-sm);
+}
+
+.privacy-page__email {
+  font-weight: 700;
+  color: var(--color-brown-dark);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.privacy-page__email:hover {
+  color: var(--color-brown);
+}
+
+.privacy-page__back {
+  margin-top: var(--space-md);
 }
 
 .footer__domain {
