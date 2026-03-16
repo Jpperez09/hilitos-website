@@ -274,7 +274,34 @@
 
 
 /* ============================================================
-   8. UTILITY — Current year in copyright
+   8. BACK TO TOP BUTTON
+   ============================================================ */
+
+(function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  const SHOW_AFTER = 400; // px scrolled before button appears
+
+  function onScroll() {
+    if (window.scrollY > SHOW_AFTER) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run on load
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+
+/* ============================================================
+   9. UTILITY — Current year in copyright
    ============================================================ */
 
 (function updateCopyright() {

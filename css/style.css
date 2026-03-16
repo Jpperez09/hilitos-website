@@ -1342,7 +1342,373 @@ button {
 @media print {
   .navbar,
   .whatsapp-float,
+  .back-to-top,
   .hero__scroll-hint {
     display: none !important;
   }
+}
+
+
+/* ============================================================
+   17. NAVBAR CTA + ACTIVE LINK
+   ============================================================ */
+
+/* Desktop WhatsApp CTA in navbar */
+.navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-xl);
+  transition: background-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.navbar__cta svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.navbar__cta:hover {
+  background-color: var(--color-whatsapp-dk);
+  transform: translateY(-1px);
+}
+
+/* Active nav link underline */
+.navbar__link.active::after {
+  width: 100%;
+}
+
+.navbar.scrolled .navbar__link.active {
+  color: var(--color-brown-dark);
+}
+
+/* Mobile WA menu link */
+.navbar__mobile-link--wa {
+  display: flex;
+  align-items: center;
+  color: var(--color-whatsapp-dk);
+}
+
+.navbar__mobile-link--wa svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+/* Extend mobile menu height for WA link */
+.navbar__mobile-menu.open {
+  max-height: 340px;
+}
+
+
+/* ============================================================
+   18. PRODUCT CARD TAG + OVERLAY SVG
+   ============================================================ */
+.product-card__tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brown);
+  background-color: var(--color-blush);
+  border-radius: var(--radius-xl);
+  padding: 0.2rem 0.65rem;
+}
+
+/* SVG inside product card overlay button */
+.product-card__quick-btn svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Bigger touch target on mobile for small buttons */
+@media (max-width: 767px) {
+  .product-card__footer .btn--sm {
+    padding: 0.7rem 1rem;
+  }
+}
+
+
+/* ============================================================
+   19. LOOKBOOK CTA
+   ============================================================ */
+.lookbook__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-xl);
+  text-align: center;
+}
+
+.lookbook__cta-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-text-mid);
+}
+
+
+/* ============================================================
+   20. TESTIMONIOS
+   ============================================================ */
+.testimonios {
+  background-color: var(--color-blush);
+}
+
+.testimonios__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 600px) {
+  .testimonios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonios__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonio-card {
+  background-color: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.testimonio-card__stars {
+  color: #F5A623;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.testimonio-card__text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-text-mid);
+  line-height: 1.75;
+  flex: 1;
+  margin: 0;
+}
+
+.testimonio-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-top: var(--space-xs);
+  border-top: 1px solid var(--color-beige);
+}
+
+.testimonio-card__name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.testimonio-card__city {
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
+}
+
+.testimonio-card__city::before {
+  content: '·';
+  margin-right: 0.3rem;
+  color: var(--color-brown-light);
+}
+
+
+/* ============================================================
+   21. PAGOS TRUST BAR
+   ============================================================ */
+.pagos {
+  background-color: var(--color-beige);
+  border-top: 1px solid var(--color-beige-dark);
+  border-bottom: 1px solid var(--color-beige-dark);
+  padding-block: var(--space-md);
+}
+
+.pagos__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .pagos__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: var(--space-md);
+  }
+}
+
+.pagos__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  white-space: nowrap;
+}
+
+.pagos__methods {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagos__method {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-mid);
+}
+
+.pagos__method-icon {
+  font-size: 1rem;
+}
+
+.pagos__note {
+  font-size: 0.78rem;
+  color: var(--color-text-soft);
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   22. FAQ MINI-CTA
+   ============================================================ */
+.faq__cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-cream);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.faq__cta p {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--color-text-mid);
+  min-width: 180px;
+  margin: 0;
+}
+
+
+/* ============================================================
+   23. CONTACT 4-COLUMN GRID
+   ============================================================ */
+@media (min-width: 600px) {
+  .contacto__grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .contacto__grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+  }
+}
+
+.contacto__text--note {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+}
+
+
+/* ============================================================
+   24. FOOTER EXTRAS
+   ============================================================ */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer__privacy {
+  font-size: 0.72rem;
+  color: rgba(255, 253, 249, 0.38);
+  margin-top: 0.15rem;
+}
+
+.footer__domain {
+  font-size: 0.72rem;
+  color: rgba(255, 253, 249, 0.35);
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+
+
+/* ============================================================
+   25. BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 6.5rem; /* sits above the floating WA button */
+  right: 1.5rem;
+  z-index: 899;
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-warm-white);
+  border: 1.5px solid var(--color-beige-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.back-to-top svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-brown-dark);
 }
