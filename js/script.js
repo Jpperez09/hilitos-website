@@ -139,7 +139,48 @@
 
 
 /* ============================================================
-   4. SCROLL REVEAL — Intersection Observer
+   4. PRODUCT CARDS — Add scroll reveal attributes dynamically
+   ============================================================
+   IMPORTANT: This MUST run before initScrollReveal() so the
+   IntersectionObserver picks up all elements with data-reveal
+   and data-reveal-stagger attributes.
+   ============================================================ */
+
+(function addRevealAttributes() {
+  // Section headers
+  document.querySelectorAll('.section__header').forEach(el => {
+    el.setAttribute('data-reveal', '');
+  });
+
+  // Product grid — staggered
+  // products-renderer.js has already injected cards before this runs
+  const productGrids = document.querySelectorAll('.productos__grid');
+  productGrids.forEach(grid => {
+    grid.setAttribute('data-reveal-stagger', '');
+  });
+
+  // Nosotros image and content
+  const nosotrosImg = document.querySelector('.nosotros__img-wrap');
+  const nosotrosContent = document.querySelector('.nosotros__content');
+  if (nosotrosImg) nosotrosImg.setAttribute('data-reveal', '');
+  if (nosotrosContent) nosotrosContent.setAttribute('data-reveal', '');
+
+  // Contact items — staggered
+  const contactGrid = document.querySelector('.contacto__grid');
+  if (contactGrid) contactGrid.setAttribute('data-reveal-stagger', '');
+
+  // CTA final content
+  const ctaContent = document.querySelector('.cta-final__content');
+  if (ctaContent) ctaContent.setAttribute('data-reveal', '');
+
+  // Lookbook grid
+  const lookbookGrid = document.querySelector('.lookbook__grid');
+  if (lookbookGrid) lookbookGrid.setAttribute('data-reveal', '');
+})();
+
+
+/* ============================================================
+   5. SCROLL REVEAL — Intersection Observer
    ============================================================ */
 
 (function initScrollReveal() {
@@ -176,7 +217,7 @@
 
 
 /* ============================================================
-   5. ACTIVE NAV LINK — Highlight current section
+   6. ACTIVE NAV LINK — Highlight current section
    ============================================================ */
 
 (function initActiveNavLink() {
@@ -207,43 +248,6 @@
 
   window.addEventListener('scroll', setActiveLink, { passive: true });
   setActiveLink();
-})();
-
-
-/* ============================================================
-   6. PRODUCT CARDS — Add scroll reveal attributes dynamically
-   ============================================================ */
-
-(function addRevealAttributes() {
-  // Section headers
-  document.querySelectorAll('.section__header').forEach(el => {
-    el.setAttribute('data-reveal', '');
-  });
-
-  // Product grid — staggered
-  // Note: products-renderer.js already injected cards before this runs
-  const productGrids = document.querySelectorAll('.productos__grid');
-  productGrids.forEach(grid => {
-    grid.setAttribute('data-reveal-stagger', '');
-  });
-
-  // Nosotros image and content
-  const nosotrosImg = document.querySelector('.nosotros__img-wrap');
-  const nosotrosContent = document.querySelector('.nosotros__content');
-  if (nosotrosImg) nosotrosImg.setAttribute('data-reveal', '');
-  if (nosotrosContent) nosotrosContent.setAttribute('data-reveal', '');
-
-  // Contact items — staggered
-  const contactGrid = document.querySelector('.contacto__grid');
-  if (contactGrid) contactGrid.setAttribute('data-reveal-stagger', '');
-
-  // CTA final content
-  const ctaContent = document.querySelector('.cta-final__content');
-  if (ctaContent) ctaContent.setAttribute('data-reveal', '');
-
-  // Lookbook grid
-  const lookbookGrid = document.querySelector('.lookbook__grid');
-  if (lookbookGrid) lookbookGrid.setAttribute('data-reveal', '');
 })();
 
 
