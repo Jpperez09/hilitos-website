@@ -1,0 +1,9 @@
+# Claude Code local settings
+.claude/
+
+# Raw source images (originals — not served by the website)
+Referencias/
+
+# OS
+.DS_Store
+Thumbs.db
