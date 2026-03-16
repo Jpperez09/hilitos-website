@@ -1,0 +1,125 @@
+{
+  "products": [
+    {
+      "ref": "2257",
+      "name": "Estuche Saco con Capa",
+      "description": "Saco con capa, pantalón con pie, gorro y mitones tejidos a mano. Nuestro estuche más querido, en colores pastel naturales.",
+      "talla": "RN",
+      "price": 84000,
+      "colors": ["Amarillo", "Verde Agua", "Beige", "Blanco"],
+      "image": "/images/productos/2257.jpg",
+      "keywords": ["estuche", "saco", "capa", "gorro", "mitones", "pantalón", "rn", "recién nacido", "amarillo", "verde agua", "2257"],
+      "featured": true
+    },
+    {
+      "ref": "2258",
+      "name": "Estuche Tejido Clásico",
+      "description": "Ajuar clásico artesanal tejido a mano. Incluye saco, pantalón con pie cubierto, gorro y mitones en hilo suave.",
+      "talla": "RN",
+      "price": 84000,
+      "colors": ["Beige", "Blanco", "Verde Agua", "Rosa"],
+      "image": "/images/productos/2258.jpg",
+      "keywords": ["estuche", "saco", "clásico", "pantalón", "gorro", "mitones", "rn", "recién nacido", "beige", "blanco", "2258"],
+      "featured": true
+    },
+    {
+      "ref": "2809",
+      "name": "Set Premium Recién Nacido",
+      "description": "Nuestro set premium con acabados especiales. Saco, pantalón, gorro, mitones y body interior para la llegada más especial.",
+      "talla": "RN",
+      "price": 105000,
+      "colors": ["Blanco", "Beige", "Café"],
+      "image": "/images/productos/2809.jpg",
+      "keywords": ["set", "premium", "saco", "pantalón", "gorro", "mitones", "body", "rn", "recién nacido", "blanco", "2809"],
+      "featured": true
+    },
+    {
+      "ref": "2810",
+      "name": "Conjunto Tejido Natural",
+      "description": "Elaborado en fibra natural 100%. Transpirable, suave al tacto y amigable con la piel más delicada del recién nacido.",
+      "talla": "RN",
+      "price": 78000,
+      "colors": ["Natural", "Beige"],
+      "image": "/images/productos/2810.jpg",
+      "keywords": ["conjunto", "natural", "fibra", "transpirable", "suave", "rn", "recién nacido", "beige", "2810"],
+      "featured": true
+    },
+    {
+      "ref": "2817",
+      "name": "Conjunto Unisex Artesanal",
+      "description": "Diseño unisex ideal para niño o niña. Saco, pantalón con pie, gorro y mitones. Ideal para regalo de baby shower.",
+      "talla": "RN / 0–3M",
+      "price": 84000,
+      "colors": ["Beige", "Blanco", "Azul", "Rosa", "Café"],
+      "image": "/images/productos/2817.jpg",
+      "keywords": ["conjunto", "unisex", "niño", "niña", "baby shower", "regalo", "rn", "0-3m", "2817"],
+      "featured": true
+    },
+    {
+      "ref": "2823",
+      "name": "Ajuar Baby Shower",
+      "description": "El regalo perfecto para un baby shower. Tejido artesanal presentado en caja especial, listo para sorprender.",
+      "talla": "RN",
+      "price": 89000,
+      "colors": ["Beige", "Blanco", "Rosa", "Azul"],
+      "image": "/images/productos/2823.jpg",
+      "keywords": ["ajuar", "baby shower", "regalo", "caja", "especial", "rn", "recién nacido", "2823"],
+      "featured": true
+    },
+    {
+      "ref": "4091",
+      "name": "Set Hospital Recién Nacido",
+      "description": "Pensado para el momento de llegar al mundo. Suave, cómodo y tejido con amor. Perfecto para las primeras fotos en el hospital.",
+      "talla": "RN",
+      "price": 84000,
+      "colors": ["Blanco", "Beige", "Rosa", "Azul"],
+      "image": "/images/productos/4091.jpg",
+      "keywords": ["set", "hospital", "llegada", "fotos", "newborn", "rn", "recién nacido", "blanco", "4091"],
+      "featured": true
+    },
+    {
+      "ref": "4105",
+      "name": "Estuche Newborn Fotografía",
+      "description": "Creado para la sesión de fotos más especial. Colores suaves y texturas hermosas para capturar los primeros momentos.",
+      "talla": "RN / 3M",
+      "price": 78000,
+      "colors": ["Beige", "Blanco", "Rosa"],
+      "image": "/images/productos/4105.jpg",
+      "keywords": ["estuche", "newborn", "fotografía", "fotos", "sesión", "rn", "3m", "beige", "rosa", "4105"],
+      "featured": true
+    },
+    {
+      "ref": "4111",
+      "name": "Conjunto Artesanal Bebé",
+      "description": "Conjunto clásico artesanal para bebé. Tejido a mano en fibras naturales suaves. Disponible en tallas RN y 0–3M.",
+      "talla": "RN / 0–3M",
+      "price": 78000,
+      "colors": ["Azul", "Beige", "Blanco", "Rosa"],
+      "image": "/images/productos/4111.jpg",
+      "keywords": ["conjunto", "artesanal", "bebé", "fibra", "natural", "rn", "0-3m", "azul", "4111"],
+      "featured": true
+    },
+    {
+      "ref": "4114",
+      "name": "Estuche Especial Niña",
+      "description": "Estuche artesanal para bebé niña con detalles especiales. Tejido a mano con mucho amor.",
+      "talla": "RN",
+      "price": 89000,
+      "colors": ["Blanco", "Rosa", "Beige", "Rojo"],
+      "image": "/images/productos/4114.jpg",
+      "keywords": ["estuche", "niña", "especial", "rn", "recién nacido", "rosa", "blanco", "4114"],
+      "featured": false
+    },
+    {
+      "ref": "1449",
+      "name": "Set Artesanal Clásico",
+      "description": "Set artesanal de tres piezas. Saco, pantalón y gorro tejidos en hilo suave natural.",
+      "talla": "RN",
+      "price": 74000,
+      "colors": ["Beige", "Blanco"],
+      "image": "/images/productos/1449.jpg",
+      "keywords": ["set", "artesanal", "clásico", "saco", "pantalón", "gorro", "rn", "beige", "1449"],
+      "featured": false
+    }
+  ]
+}

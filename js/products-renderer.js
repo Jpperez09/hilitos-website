@@ -21,14 +21,14 @@
 
   function buildCard(product) {
     const waLink = HILITOS.orderLink(product.ref);
-    const price  = HILITOS.formatPrice(product.precio);
+    const price  = HILITOS.formatPrice(product.price);
 
     return `
 <article class="product-card">
   <div class="product-card__img-wrap">
     <img
-      src="${product.imagen}"
-      alt="${product.nombre} – Hilitos ajuar artesanal"
+      src="${product.image}"
+      alt="${product.name} – Hilitos ajuar artesanal"
       class="product-card__img"
       loading="lazy"
     />
@@ -45,9 +45,9 @@
     </div>
   </div>
   <div class="product-card__info">
-    <h3 class="product-card__name">${product.nombre}</h3>
+    <h3 class="product-card__name">${product.name}</h3>
     <span class="product-card__tag">Talla ${product.talla} · Ref. ${product.ref}</span>
-    <p class="product-card__desc">${product.descripcion}</p>
+    <p class="product-card__desc">${product.description}</p>
     <div class="product-card__footer">
       <span class="product-card__price">${price}</span>
       <a
