@@ -1,12 +1,13 @@
 /* ============================================================
    HILITOS — Product Grid Renderer
-   Reads window.HILITOS (defined in data/products.js)
-   and builds the product cards dynamically.
+   Reads window.HILITOS (defined in data/products.js).
+   Re-callable via window.__hilitos_renderGrid() after live
+   data arrives from the API.
    ============================================================ */
 
 'use strict';
 
-(function renderProductGrid() {
+function renderProductGrid() {
 
   const grid = document.querySelector('.productos__grid');
   if (!grid) return;
@@ -84,4 +85,10 @@
 
   console.log('[Hilitos] rendered', featured.length, 'product cards');
 
-})();
+}
+
+// Expose globally so data/products.js can call it after the live API fetch
+window.__hilitos_renderGrid = renderProductGrid;
+
+// Initial render on page load (uses static fallback data immediately)
+renderProductGrid();
